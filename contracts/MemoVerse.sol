@@ -177,7 +177,6 @@ contract MemoVerse is Ownable, ReentrancyGuard {
     }
 
     // New function to appreciate a post using SponsorshipToken
-    // New function to appreciate a post using SponsorshipToken
     function appreciatePostWithTokens(uint256 postId, uint256 amount) external payable {
         require(postId < blogPosts.length, "Invalid post ID");
         require(amount > 0, "Amount must be greater than 0");
@@ -194,7 +193,6 @@ contract MemoVerse is Ownable, ReentrancyGuard {
 
         emit PostSponsored(postId, msg.sender, amount);
     }
-
 
     // Feature: Pay Creators Monthly Based on Appreciated Amounts
     function payoutCreators(uint256[] calldata postIds) external onlyAdmin {
